@@ -1,0 +1,984 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+
+		<title>Igor Kovalev's Resume</title>
+		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+		<style>
+			body, html {
+  padding-top:2.5em;
+  margin:0;
+  background-color:#fafafa;
+  font-size: 13pt;
+  font-family: "Open Sans";
+}
+
+h2{
+  font-weight: normal;
+  margin: 0.5em;
+  margin-bottom: 0.2em;
+}
+
+h3{
+  font-weight:300;
+  font-size:1em;
+  margin: 0em;
+}
+
+.note {
+  display:block;
+  position: absolute;
+  top:10px;
+  left:10px;
+
+  font-size: 0.6em;
+}
+
+.summary p{
+  font-size:0.7em;
+  font-weight:400;
+
+  color: #424242;
+
+  margin-left:2em;
+}
+
+.new {
+  background-color: #81C784;
+
+  border: 1px solid #757575;
+  padding: 1px;
+  border-radius: 4px;
+}
+
+/* Header */
+
+header {
+  width:100%;
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Merriweather";
+}
+
+.header-content {
+  display: inline-block;
+}
+
+.pic {
+  margin-top:-3em;
+
+  border-radius:10em;
+
+  border: 2px solid #dddddd;
+  cursor:pointer;
+}
+
+@keyframes intro {
+  from {
+    height:0em;
+  }
+
+  to {
+    height: 6em;
+  }
+}
+
+.pic{
+  height: 6em;
+  transition: .3s;
+}
+
+.pic:hover{
+  transform: translateY(20px) scale(2);
+}
+
+.pic:hover ~ .content-wrapper{
+  transform: translateY(75px);
+}
+
+header p {
+  text-align:center;
+
+  margin:0;
+
+  color: #212121;
+}
+
+.first-name {
+   font-size: 1.05em;
+}
+
+.subtitle {
+  font-family: "Merriweather";
+  font-size:0.7em;
+  font-weight:500;
+  color: #424242;
+}
+
+/* Information */
+
+.paper {
+  margin: 0 auto;
+  margin-bottom:1em;
+
+  background-color:white;
+  width:60%;
+
+  padding:0.5em 0 0.5em 0;
+
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 3px solid #dddddd;
+  border-radius: 3px;
+
+  text-align: center;
+}
+
+/* Content Part */
+
+.content-wrapper {
+  padding-right: 7.25%;
+  padding-left: 7.25%;
+  transition: .3s;
+  padding-bottom: 20px;
+
+  text-align: left;
+}
+
+.content {
+  display:table;
+  width:100%;
+
+  padding-top:1.5em;
+
+  /*border-top: 1px solid #eeeeee;*/
+}
+
+
+.work-listing .first-listing{
+  margin-top: 1.8em;
+}
+
+.content:last-child {
+  margin-bottom: 2em;
+}
+
+body > div > article > div > section:last-child {
+  padding-bottom:1.5em;
+}
+
+.row {
+    display:table-row;
+}
+
+.row div {
+    display:table-cell;
+}
+
+.content-cat {
+  text-align:center;
+  vertical-align:middle;
+  font-variant:small-caps;
+
+  letter-spacing: 1px;
+
+  color: #212121;
+
+  font-family: "Merriweather";
+
+  width:25%;
+}
+
+.content-cat p {
+  font-size:0.55em;
+  font-weight:600;
+
+  margin-bottom:0;
+}
+
+.content-text {
+  border-left:1px solid #dddddd;
+  transition: border 0.66s ease-in;
+}
+
+.big-text {
+  vertical-align:top;
+}
+
+.content-text ul {
+  padding:0;
+  margin:0;
+  margin-top:0.15em;
+
+  width:85%;
+  margin-left:1.5em;
+}
+
+.content-text ul:last-child {
+  margin-bottom:0.5em;
+}
+
+.content-text ul li {
+  font-size:0.7em;
+
+  display:inline-block;
+
+}
+
+.content-text ul li:first-child {
+  width:35%;
+
+  color: #424242;
+
+  font-weight:600;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.work-listing p {
+  font-size:0.7em;
+
+  color: #424242;
+
+  margin-left:2em;
+  margin-top:0.45em;
+  margin-bottom: 0.45em;
+}
+
+div.content-text.work-listing.education-listing > p:nth-child(2) {
+  margin-top:0.25em;
+}
+
+.work-listing .highlight {
+  font-size:0.7em;
+  font-weight:400;
+
+  color: #424242;
+
+  margin-left:3.25em;
+  padding-left:0.5em;
+
+  border-left:1px solid #dddddd;
+}
+
+.assignment {
+  border-left: 1px solid #dddddd;
+}
+
+.education-listing > .heading {
+  font-weight:600;
+
+  margin-top:0.75em;
+  margin-left:2em;
+}
+
+.education-listing > .highlight {
+  margin-left:3.25em;
+}
+
+.highlight {
+  transition: border .33s ease-in;
+}
+
+.profiles-print{
+  display: none;
+}
+
+.profiles-listing ul li, .profiles-listing ul li:first-child {
+  width:24%;
+  font-weight: normal;
+}
+
+.work-content, .education-content {
+  padding-top: .75em;
+}
+
+div.content-text.skills-listing > p {
+  font-size:0.7em;
+  font-weight:400;
+
+  margin-left: 2em;
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+.no-nl{
+  display: inline-block;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+a{
+  text-decoration: none;
+  color: #0277bd;
+}
+
+.fa{
+  color: #000;
+}
+
+.network{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -0.7em;
+}
+
+@media(max-width:1400px) {
+  .paper {
+    width:80%;
+  }
+
+  .content-cat{
+    padding-left:2%;
+  }
+
+  .content-wrapper{
+    padding-right: 2%;
+  }
+}
+
+		</style>
+
+		<style media="screen">
+			@media(max-width:795px) {
+  .paper {
+    width:96%;
+  }
+
+  .pic{
+    cursor: auto;
+  }
+
+  .content-cat{
+    padding-left:1%;
+  }
+
+  .content-wrapper{
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+
+  .profiles-listing ul li, .profiles-listing ul li:first-child{
+    width: 49%;
+  }
+
+  .small-fullwidth-row{
+    display: block;
+  }
+
+  .small-fullwidth-row div{
+    display: block;
+    width:100%;
+  }
+
+  .small-fullwidth-row .content-text{
+    border-left: 2px solid #dddddd;
+  }
+
+  .small-center{
+    text-align: center;
+  }
+
+  .work-listing .first-listing{
+    margin-top: 0.45em;
+  }
+
+  .work-listing .small-center{
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .top-content h3{
+    width: 100px;
+  }
+}
+
+		</style>
+
+		<style media="print">
+			
+body, html {
+  background-color: white;
+  padding-top: 1.5em;
+  font-size:12pt;
+  font-family: "Merriweather";
+}
+
+a{
+  text-decoration: none;
+  color: #000;
+}
+
+h2{
+  margin-top:0em;
+}
+
+.paper {
+  width:100%;
+  border: 0;
+
+  padding-top: 0;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.subtitle {
+  font-size: 0.7em;
+}
+
+.header-pic {
+  float:left;
+}
+
+.pic{
+  height:4.2em;
+  width:4.2em;
+
+  transform: translate(-8em, 1.9em);
+}
+
+.profiles {
+  display:none;
+}
+
+.profiles-print{
+  display: table;
+}
+
+.content {
+  page-break-inside:avoid;
+  page-break-after:auto;
+}
+
+.header-text {
+  float:left;
+  margin-top: -1.6em;
+}
+
+.content-wrapper > .content:first-child {
+  padding-top: 2em;
+}
+
+.content:last-child {
+  padding-bottom: 0;
+}
+
+.content-cat {
+  width:25%;
+  position: relative;
+  right: 4%;
+  color:black;
+}
+
+.content-cat p {
+  font-size:0.5em;
+  font-weight: 600;
+}
+
+header p, .content-text, .work-listing p, .content-text ul li:first-child, .work-listing .highlight, .content-text.skills-listing > ul > li > .highlight {
+  color:black;
+}
+
+.content-text.skills-listing > ul > li span, .subtitle {
+  color:#212121;
+}
+
+.content-text ul:last-child {
+  margin-bottom: 0.25em;
+}
+
+.content-text ul li:first-child {
+  width:50%;
+}
+
+.profiles-listing ul li:first-child {
+  width:32%;
+}
+
+div.content-text.skills-listing > ul > li {
+  width:33%;
+}
+
+.work-listing p {
+  margin-bottom: 0.1em;
+}
+
+div.content-text.skills-listing > ul > li > p {
+  margin-top: 0.4em;
+  margin-bottom: 0.5em;
+}
+
+div.content-text.skills-listing > ul > li {
+  padding-left: 1.5em;
+}
+
+div.content-text.skills-listing > ul > li:first-child {
+  padding-left: 2em;
+}
+
+.note {
+  display:none;
+}
+
+.content-text:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.content-text ul li a:hover {
+  color:#4fc3f7;
+}
+
+.summary p{
+  color: black;
+}
+
+.highlight:hover, .content-text.skills-listing > ul > li > .highlight:hover {
+  border-left:1px solid #eeeeee;
+}
+
+.big-text {
+  padding-top: 0;
+}
+
+		</style>
+	</head>
+	<body>
+		<div class="resume-wrapper">
+			<article class="paper">
+					<div class="content-wrapper">
+						<header>
+							<div class="header-content">
+								<div class="header-text">
+									<h2>Igor Kovalev</h2>
+									<p class="subtitle">Software Developer</p>
+								</div>
+							</div>
+						</header>
+						<!-- CONTACT -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Contact</h3>
+								</div>
+								<div class="content-text">
+										<ul>
+											<li>Email</li>
+											<li><a href="mailto:grkovalev@gmail.com">grkovalev@gmail.com</a></li>
+										</ul>
+
+
+								</div>
+							</div>
+						</section>
+
+						<!-- LOCATION -->
+								<section class="content top-content">
+									<div class="row">
+										<div class="content-cat">
+										 <h3>Location</h3>
+										</div>
+										<div class="content-text">
+
+
+												<ul>
+													<li>Country</li>
+													<li>Netherlands</li>
+												</ul>
+
+												<ul>
+													<li>City</li>
+													<li>Amsterdam</li>
+												</ul>
+
+
+										</div>
+									</div>
+								</section>
+
+
+						<!-- LANGUAGE -->
+						<section class="content top-content">
+							<div class="row">
+								<div class="content-cat">
+								 <h3>Languages</h3>
+								</div>
+								<div class="content-text">
+
+										<ul>
+
+												<li>English</li>
+
+											<li>Fluent</li>
+
+										</ul>
+										<ul>
+
+												<li>Russian</li>
+
+											<li>Native</li>
+
+										</ul>
+
+								</div>
+							</div>
+						</section>
+
+						<!-- PROFILES for website-->
+							<section class="content profiles top-content">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text profiles-listing">
+										<ul>
+													<li>
+													<a href="https://www.linkedin.com/in/grkovalev" target="_blank">
+														<i class="fa fa-2x fa-linkedin-square"></i>
+														<span class="network">LinkedIn</span>
+													</a>
+													</li>
+													<li>
+													<a href="https://github.com/grkovalev" target="_blank">
+														<i class="fa fa-2x fa-github-square"></i>
+														<span class="network">GitHub</span>
+													</a>
+													</li>
+													<li>
+													<a href="https://stackoverflow.com/users/2044311/igor-kovalev" target="_blank">
+														<i class="fa fa-2x fa-stackoverflow-square"></i>
+														<span class="network">Stackoverflow</span>
+													</a>
+													</li>
+										</ul>
+									</div>
+								</div>
+							</section>
+						<!-- PROFILES for print -->
+							<section class="content profiles-print">
+								<div class="row">
+									<div class="content-cat">
+									 <h3>Profiles</h3>
+									</div>
+									<div class="content-text">
+											<ul>
+												<li>LinkedIn</li>
+												<li><a href="https://www.linkedin.com/in/grkovalev">linkedin.com/in/grkovalev</a></li>
+											</ul>
+											<ul>
+												<li>GitHub</li>
+												<li><a href="https://github.com/grkovalev">github.com/grkovalev</a></li>
+											</ul>
+											<ul>
+												<li>Stackoverflow</li>
+												<li><a href="https://stackoverflow.com/users/2044311/igor-kovalev">stackoverflow.com/users/2044311/igor-kovalev</a></li>
+											</ul>
+									</div>
+								</div>
+							</section>
+
+							<section class="content summary">
+								<div class="row small-fullwidth-row">
+									<div class="content-cat">
+									 <h3>About Me</h3>
+									</div>
+									<div class="content-text work-content">
+										<p>
+											I have always been interested in technology, and this passion determined my career path: working in the IT industry has been my source of income and excitement for more than ten years. Like many others, I started my journey in an IT support team. From the very beginning, I saw software development as my true calling. A clear goal and eager desire to challenge and learn new things every day made me show steady progress and good results, so I moved from the entrance level of IT towards more complex tasks quickly. Now I determine myself as a solid specialist who has seen a lot and tried a lot of approaches to a wide variety of challenges in different companies from various industries. Still, a specialist whois always eager to see, try, and learn even more and never stop exploring and implementing cutting-edge technologies and approaches in my daily working practice.
+										</p>
+									</div>
+								</div>
+							</section>
+
+								<section class="content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+											<h3>Work	Experience</h3>
+
+											<p><span class="no-nl">2022-10</span> to <span class="no-nl">Present</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center first-listing">
+													<strong>Software Engineer, Team leader/Engineering manager</strong> at <strong><a href="https://www.datasnipper.com/" class="no-nl">DataSnipper</a></strong>
+											</p>
+
+
+												<p class="highlight">Lead the development of a desktop application for end users using C# .NET Framework 4.8 and WPF, delivering user-friendly and efficient software solutions</p>
+												<p class="highlight">Develop and maintain CI/CD pipelines using GitLab CI and Docker, ensuring seamless integration and deployment processes</p>
+												<p class="highlight">Lead a team of developers, providing people management, mentoring, and coaching to foster growth and enhance performance</p>
+												<p class="highlight">Maintain the release management process, coordinating and overseeing the deployment and delivery of software releases</p>
+												<p class="highlight">Collaborate with the Product Owner to create and maintain the product roadmap, ensuring alignment with business goals and customer needs</p>
+												<p class="highlight">Serve as a hiring manager, actively participating in the recruitment and selection process to build a skilled and high-performing development team</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2019-05</span> to <span class="no-nl">2022-10</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Data Manager</strong> at <strong><a href="https://www.perceptyx.com/" class="no-nl">Perceptyx B.V.</a></strong>
+											</p>
+
+
+												<p class="highlight">Developed automated data pipelines for the Perceptyx platform using Perl and Python, enhancing data processing efficiency and accuracy</p>
+												<p class="highlight">Created internal tools for data processing using Perl and Vue.js, streamlining data management procedures within the organization</p>
+												<p class="highlight">Conducted thorough code reviews and quality assurance tests to maintain high performance and reliability standards</p>
+												<p class="highlight">Applied customer-specific customizations to the Perceptyx platform, ensuring tailored solutions that met individual client requirements</p>
+												<p class="highlight">Cleaned, validated, and uploaded clients&#x27; data to the Perceptyx platform, ensuring data integrity and smooth integration</p>
+												<p class="highlight">Developed client-specific reports and dashboards, providing valuable insights and visualizations to support data-driven decision making</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2018-02</span> to <span class="no-nl">2019-05</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Software Engineer, Team leader</strong> at <strong><a href="https://ntpayments.com/en/" class="no-nl">NT.Payments</a></strong>
+											</p>
+
+
+												<p class="highlight">Led the development of a payment processing server using C# .NET Framework 4.5, ASP.NET Web API, Windows services, and MS SQL Server, ensuring seamless and secure payment transactions</p>
+												<p class="highlight">Developed an embedded client application for payment machines using C# .NET Framework 4.5 and WPF, facilitating efficient and user-friendly payment processing</p>
+												<p class="highlight">Created a Back-office system using VB, Web Forms, Telerik, MS SQL Server, and SQL Server Reporting Services, providing essential administrative functionalities</p>
+												<p class="highlight">Evaluated, recommended, and selected hardware and software solutions to optimize performance and meet specific project requirements</p>
+												<p class="highlight">Managed software releases, coordinating and overseeing the deployment process, ensuring smooth implementation</p>
+												<p class="highlight">Mentored junior developers, elicited requirements, and conducted usability testing, fostering their growth and promoting high-quality deliverables</p>
+												<p class="highlight">Effectively communicated with clients to understand their needs, concerns, and expectations, ensuring successful project outcomes</p>
+												<p class="highlight">Collaborated with designers to create visually appealing and intuitive interfaces, enhancing user experiences</p>
+												<p class="highlight">Analyzed customer requirements and implemented solutions that aligned with their business objectives</p>
+												<p class="highlight">Performed project management activities such as estimating, scheduling, and monitoring tasks to ensure timely delivery and project success</p>
+												<p class="highlight">Developed reports, documents, and modules to support project functionalities and deliverables</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2015-12</span> to <span class="no-nl">2018-02</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Software Engineer</strong> at <strong><a href="https://ntpayments.com/en/" class="no-nl">NT.Payments</a></strong>
+											</p>
+
+
+												<p class="highlight">Developed and implemented a payment processing server using C# .NET Framework 4.5, ASP.NET Web API, Windows services, and MS SQL Server, streamlining payment transactions and ensuring secure processing</p>
+												<p class="highlight">Created an embedded client application for payment machines using C# .NET Framework 4.5 and WPF, facilitating seamless integration and user-friendly functionality</p>
+												<p class="highlight">Played a key role in developing an e-money system using C# .NET Framework 4.5, MS SQL Server, ASP.NET Web API, Angular2, and Typescript, enabling efficient digital payment operations</p>
+												<p class="highlight">Actively explored various languages and frameworks, taking initiative to suggest viable solutions to enhance and accelerate workflow processes</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2012-11</span> to <span class="no-nl">2015-12</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Software Engineer</strong> at <strong><a href="https://www.gloria-jeans.ru" class="no-nl">Gloria Jeans</a></strong>
+											</p>
+
+
+												<p class="highlight">Developed and supported client applications for POS using the 1C ERP System, contributing to improved business operations and efficiency</p>
+												<p class="highlight">Maintained and updated current systems, ensuring their stability and functionality to meet evolving business needs</p>
+												<p class="highlight">Proactively addressed and resolved customer-reported issues, demonstrating exceptional problem-solving skills and ensuring customer satisfaction</p>
+												<p class="highlight">Spearheaded performance improvement and optimization efforts on existing user interface forms, enhancing the overall user experience and system performance</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2011-04</span> to <span class="no-nl">2012-11</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Technical support specialist</strong> at <strong><a href="https://www.gloria-jeans.ru" class="no-nl">Gloria Jeans</a></strong>
+											</p>
+
+
+												<p class="highlight">Managed procurement and configuration management to ensure optimal operations and efficiency</p>
+												<p class="highlight">Delivered direct, hands-on support to users on a daily basis, cultivating productive relationships and addressing their needs</p>
+												<p class="highlight">Successfully resolved complaints, consistently exceeding customer expectations and maintaining satisfaction</p>
+												<p class="highlight">Provided comprehensive technical support by troubleshooting both technical and account issues for customers, delivering prompt and effective solutions</p>
+												<p class="highlight">Took responsibility for configuring and thoroughly testing new hardware and software, ensuring seamless integration and functionality</p>
+												<p class="highlight">Efficiently resolved issues through phone or email correspondence, utilizing excellent communication and problem-solving skills</p>
+												<p class="highlight">Demonstrated expertise in swiftly diagnosing and resolving incoming customer technical support issues, enhancing overall customer experience</p>
+
+								</div>
+							</div>
+						</section>
+								<section class="content work-content">
+							<div class="row small-fullwidth-row">
+								<div class="content-cat big-text">
+
+											<p><span class="no-nl">2009-06</span> to <span class="no-nl">2011-04</span></p>
+
+								</div>
+								<div class="content-text work-listing education-listing">
+											<p class="small-center">
+													<strong>Technical support specialist</strong> at <strong>Shoes Empire</strong>
+											</p>
+
+
+												<p class="highlight">Designed and implemented a disaster recovery plan</p>
+												<p class="highlight">Install new hardware and software</p>
+												<p class="highlight">Managing IT infrastructure</p>
+
+								</div>
+							</div>
+						</section>
+
+
+								<section class="content">
+								<div class="row">
+									<div class="content-cat big-text">
+
+											<h3>Education</h3>
+
+												<p><span class="no-nl">2008-09</span> to <span class="no-nl">2012-07</span></p>
+
+									</div>
+									<div class="content-text work-listing education-listing">
+												<p class="heading first-listing">Taganrog Technological Institute of Southern Federal University</p>
+
+											<p class="highlight">
+											<i>Faculty of Automation and Computer Engineering</i>
+											</p>
+
+									</div>
+								</div>
+							</section>
+								<section class="content education-content">
+								<div class="row">
+									<div class="content-cat big-text">
+
+
+												<p><span class="no-nl">2005-09</span> to <span class="no-nl">2008-07</span></p>
+
+									</div>
+									<div class="content-text work-listing education-listing">
+												<p class="heading">Armavir branch College of Law</p>
+
+											<p class="highlight">
+											<i>Faculty of Automation and Computer Engineering</i>
+											</p>
+
+									</div>
+								</div>
+							</section>
+
+
+
+
+
+
+
+						<section class="content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Skills</h3>
+								</div>
+								<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+											<strong>
+											Data Engineering:
+
+											</strong>
+										</span>
+
+
+												MySQL, T-SQL, MongoDB, Pandas
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											DevOps:
+
+											</strong>
+										</span>
+
+
+												git, Docker, GitLab, Azure DevOps
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Frontend Development:
+
+											</strong>
+										</span>
+
+
+												HTML, CSS, TypeScript, Vue.js, React
+										</p>
+										<p>
+										<span class="name">
+											<strong>
+											Backend Development:
+
+											</strong>
+										</span>
+
+
+												Perl, Python, C#, OpenAPI
+										</p>
+								</div>
+							</div>
+						</section>
+
+						<section class="content">
+							<div class="row">
+								<div class="content-cat">
+									<h3>Interests</h3>
+								</div>
+								<div class="content-text skills-listing">
+										<p>
+										<span class="name">
+										</span>
+												3D PRINTING, VIDEO GAMES
+										</p>
+								</div>
+							</div>
+						</section>
+				</div>
+			</article>
+		</div>
+	</body>
+</html>
